@@ -1,0 +1,10 @@
+Ryan Barber
+CISC 481
+Program 1 - N-Puzzle Search
+
+At the bottom of the python file, you will see the code divided up into
+parts. Simply uncomment (delete '#' character) at the begining of each
+line under the section you want to run. Save the file and execute.
+
+run command in bash:
+	~$ python barber-p1.py
