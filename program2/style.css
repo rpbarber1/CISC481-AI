@@ -1,0 +1,41 @@
+#queen-selector{
+    margin-left: 20%;
+    background-color: aqua;
+    padding: 10px;
+    border-radius: 10px;
+    border:2px solid gold;
+    display: inline-block;
+}
+#num-queen{
+    height: 25px;
+    width: 50px;
+    margin: 2px;
+    padding: 2px;
+    background-color: white;
+    border-radius: 2px;
+    border: 2px solid;
+    border-color: grey;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+#selector{
+    display: inline;
+}
+td{
+    width: 50px;
+    height: 50px;
+    background-size: cover;
+}
+table{
+    margin-left: 20%;
+    margin-top: 10px;
+    background-color: burlywood;
+}
+#odd{
+    background-color: greenyellow;
+}
+#even{
+    background-color: green;
+}

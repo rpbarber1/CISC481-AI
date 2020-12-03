@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>N-Queens AI</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+</head>
+<body style="background-color: khaki;">
+    <h1 style="margin-left: 25%;">N-Queens solver</h1>
+    <h2 style="margin-left: 25%;">By Ryan Barber</h2>
+    <div id="queen-selector">
+        <p>select the number of queens</p>
+        <a id="num-queen" href="eight.html">8</a>
+        <a id="num-queen" href="twelve.html">12</a>
+        <a id="num-queen" href="sixteen.html">16</a>
+        <div id="selector">You have chosen: 12 (~10 sec)</div>
+        <div id="placer">
+        <form id="queens">
+            <div id="queen1">Q1
+                <input type="radio" name="q1" value=1>1</input>
+                <input type="radio" name="q1" value=2>2</input>
+                <input type="radio" name="q1" value=3>3</input>
+                <input type="radio" name="q1" value=4>4</input>
+                <input type="radio" name="q1" value=5>5</input>
+                <input type="radio" name="q1" value=6>6</input>
+                <input type="radio" name="q1" value=7>7</input>
+                <input type="radio" name="q1" value=8>8</input>
+                <input type="radio" name="q1" value=9>9</input>
+                <input type="radio" name="q1" value=10>10</input>
+                <input type="radio" name="q1" value=11>11</input>
+                <input type="radio" name="q1" value=12>12</input>
+            </div>
+            <div id="queen2">Q2
+                <input type="radio" name="q2" value=1>1</input>
+                <input type="radio" name="q2" value=2>2</input>
+                <input type="radio" name="q2" value=3>3</input>
+                <input type="radio" name="q2" value=4>4</input>
+                <input type="radio" name="q2" value=5>5</input>
+                <input type="radio" name="q2" value=6>6</input>
+                <input type="radio" name="q2" value=7>7</input>
+                <input type="radio" name="q2" value=8>8</input>
+                <input type="radio" name="q2" value=9>9</input>
+                <input type="radio" name="q2" value=10>10</input>
+                <input type="radio" name="q2" value=11>11</input>
+                <input type="radio" name="q2" value=12>12</input>
+            </div>
+            <div id="queen3">Q3
+                <input type="radio" name="q3" value=1>1</input>
+                <input type="radio" name="q3" value=2>2</input>
+                <input type="radio" name="q3" value=3>3</input>
+                <input type="radio" name="q3" value=4>4</input>
+                <input type="radio" name="q3" value=5>5</input>
+                <input type="radio" name="q3" value=6>6</input>
+                <input type="radio" name="q3" value=7>7</input>
+                <input type="radio" name="q3" value=8>8</input>
+                <input type="radio" name="q3" value=9>9</input>
+                <input type="radio" name="q3" value=10>10</input>
+                <input type="radio" name="q3" value=11>11</input>
+                <input type="radio" name="q3" value=12>12</input>
+            </div>
+            <div id="queen4">Q4
+                <input type="radio" name="q4" value=1>1</input>
+                <input type="radio" name="q4" value=2>2</input>
+                <input type="radio" name="q4" value=3>3</input>
+                <input type="radio" name="q4" value=4>4</input>
+                <input type="radio" name="q4" value=5>5</input>
+                <input type="radio" name="q4" value=6>6</input>
+                <input type="radio" name="q4" value=7>7</input>
+                <input type="radio" name="q4" value=8>8</input>
+                <input type="radio" name="q4" value=9>9</input>
+                <input type="radio" name="q4" value=10>10</input>
+                <input type="radio" name="q4" value=11>11</input>
+                <input type="radio" name="q4" value=12>12</input>
+            </div>
+            <div id="queen5">Q5
+                <input type="radio" name="q5" value=1>1</input>
+                <input type="radio" name="q5" value=2>2</input>
+                <input type="radio" name="q5" value=3>3</input>
+                <input type="radio" name="q5" value=4>4</input>
+                <input type="radio" name="q5" value=5>5</input>
+                <input type="radio" name="q5" value=6>6</input>
+                <input type="radio" name="q5" value=7>7</input>
+                <input type="radio" name="q5" value=8>8</input>
+                <input type="radio" name="q5" value=9>9</input>
+                <input type="radio" name="q5" value=10>10</input>
+                <input type="radio" name="q5" value=11>11</input>
+                <input type="radio" name="q5" value=12>12</input>
+            </div>
+            <div id="queen6">Q6
+                <input type="radio" name="q6" value=1>1</input>
+                <input type="radio" name="q6" value=2>2</input>
+                <input type="radio" name="q6" value=3>3</input>
+                <input type="radio" name="q6" value=4>4</input>
+                <input type="radio" name="q6" value=5>5</input>
+                <input type="radio" name="q6" value=6>6</input>
+                <input type="radio" name="q6" value=7>7</input>
+                <input type="radio" name="q6" value=8>8</input>
+                <input type="radio" name="q6" value=9>9</input>
+                <input type="radio" name="q6" value=10>10</input>
+                <input type="radio" name="q6" value=11>11</input>
+                <input type="radio" name="q6" value=12>12</input>
+            </div>
+            <div id="queen7">Q7
+                <input type="radio" name="q7" value=1>1</input>
+                <input type="radio" name="q7" value=2>2</input>
+                <input type="radio" name="q7" value=3>3</input>
+                <input type="radio" name="q7" value=4>4</input>
+                <input type="radio" name="q7" value=5>5</input>
+                <input type="radio" name="q7" value=6>6</input>
+                <input type="radio" name="q7" value=7>7</input>
+                <input type="radio" name="q7" value=8>8</input>
+                <input type="radio" name="q7" value=9>9</input>
+                <input type="radio" name="q7" value=10>10</input>
+                <input type="radio" name="q7" value=11>11</input>
+                <input type="radio" name="q7" value=12>12</input>
+            </div>
+            <div id="queen8">Q8
+                <input type="radio" name="q8" value=1>1</input>
+                <input type="radio" name="q8" value=2>2</input>
+                <input type="radio" name="q8" value=3>3</input>
+                <input type="radio" name="q8" value=4>4</input>
+                <input type="radio" name="q8" value=5>5</input>
+                <input type="radio" name="q8" value=6>6</input>
+                <input type="radio" name="q8" value=7>7</input>
+                <input type="radio" name="q8" value=8>8</input>
+                <input type="radio" name="q8" value=9>9</input>
+                <input type="radio" name="q8" value=10>10</input>
+                <input type="radio" name="q8" value=11>11</input>
+                <input type="radio" name="q8" value=12>12</input>
+            </div>
+            <div id="queen8">Q9
+                <input type="radio" name="q9" value=1>1</input>
+                <input type="radio" name="q9" value=2>2</input>
+                <input type="radio" name="q9" value=3>3</input>
+                <input type="radio" name="q9" value=4>4</input>
+                <input type="radio" name="q9" value=5>5</input>
+                <input type="radio" name="q9" value=6>6</input>
+                <input type="radio" name="q9" value=7>7</input>
+                <input type="radio" name="q9" value=8>8</input>
+                <input type="radio" name="q9" value=9>9</input>
+                <input type="radio" name="q9" value=10>10</input>
+                <input type="radio" name="q9" value=11>11</input>
+                <input type="radio" name="q9" value=12>12</input>
+            </div>
+            <div id="queen8">Q10
+                <input type="radio" name="q10" value=1>1</input>
+                <input type="radio" name="q10" value=2>2</input>
+                <input type="radio" name="q10" value=3>3</input>
+                <input type="radio" name="q10" value=4>4</input>
+                <input type="radio" name="q10" value=5>5</input>
+                <input type="radio" name="q10" value=6>6</input>
+                <input type="radio" name="q10" value=7>7</input>
+                <input type="radio" name="q10" value=8>8</input>
+                <input type="radio" name="q10" value=9>9</input>
+                <input type="radio" name="q10" value=10>10</input>
+                <input type="radio" name="q10" value=11>11</input>
+                <input type="radio" name="q10" value=12>12</input>
+            </div>
+            <div id="queen8">Q11
+                <input type="radio" name="q11" value=1>1</input>
+                <input type="radio" name="q11" value=2>2</input>
+                <input type="radio" name="q11" value=3>3</input>
+                <input type="radio" name="q11" value=4>4</input>
+                <input type="radio" name="q11" value=5>5</input>
+                <input type="radio" name="q11" value=6>6</input>
+                <input type="radio" name="q11" value=7>7</input>
+                <input type="radio" name="q11" value=8>8</input>
+                <input type="radio" name="q11" value=9>9</input>
+                <input type="radio" name="q11" value=10>10</input>
+                <input type="radio" name="q11" value=11>11</input>
+                <input type="radio" name="q11" value=12>12</input>
+            </div>
+            <div id="queen8">Q12
+                <input type="radio" name="q12" value=1>1</input>
+                <input type="radio" name="q12" value=2>2</input>
+                <input type="radio" name="q12" value=3>3</input>
+                <input type="radio" name="q12" value=4>4</input>
+                <input type="radio" name="q12" value=5>5</input>
+                <input type="radio" name="q12" value=6>6</input>
+                <input type="radio" name="q12" value=7>7</input>
+                <input type="radio" name="q12" value=8>8</input>
+                <input type="radio" name="q12" value=9>9</input>
+                <input type="radio" name="q12" value=10>10</input>
+                <input type="radio" name="q12" value=11>11</input>
+                <input type="radio" name="q12" value=12>12</input>
+            </div>
+            <button id="solve" type="submit">Solve</button>
+            <button id="reset" type="reset" >Reset Queens</button>
+        </form>
+        <div id="error"></div>
+        </div>
+    </div>
+    <table id="board1"></table>
+    <table id="board2"></table>
+    <table id="board3"></table>
+    <table id="board4"></table>
+    <table id="board5"></table>
+    <table id="board6"></table>
+    <table id="board7"></table>
+    <table id="board8"></table>
+    <table id="board9"></table>
+    <table id="board10"></table>
+    <table id="board11"></table>
+    <table id="board12"></table>
+    <script src="barber-prog2.js"></script> <!--Functions loaded-->
+    <script type="text/javascript"> 
+        var csp = setup(12)
+        var frm = document.getElementById("queens");
+        var myroot = null
+        var front = null
+        frm.addEventListener("submit",function(e){
+            removeBoard(12)
+            var user_csp = JSON.parse(JSON.stringify(csp));
+            var user_assignment_list = []
+            var result = getQueens(user_csp, user_assignment_list, (new FormData(e.target)));
+            if(user_assignment_list.length > 0){
+                front = new Node(user_assignment_list, user_csp[0])
+            }
+            myroot = backtrack(user_csp,user_assignment_list);
+            if(myroot == false){
+                document.getElementById("error").textContent = "No Solution"
+                removeBoard(12)
+            } else {
+                if(front != null){
+                    front.next_node = myroot
+                    makeBoards(front, 12)
+                } else {
+                    makeBoards(myroot,12)
+                }
+            }
+            e.preventDefault();
+        })
+        frm.addEventListener("reset",function(e){
+            document.getElementById("error").textContent = ''
+            removeBoard(12)
+        })
+    </script>
+</body>
+</html>
